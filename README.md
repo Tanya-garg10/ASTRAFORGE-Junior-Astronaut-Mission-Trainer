@@ -4,8 +4,6 @@
 
 ASTRAFORGE is an interactive educational space mission simulator designed for students, educators, and space enthusiasts. Step into the boots of an outpost commander to design, build, and sustain a human habitat on the **Moon** or **Mars** while balancing critical life-support systems, power budgets, and unexpected space emergencies.
 
----
-
 ## 🌟 Highlights & Overview
 
 Young learners often imagine space exploration as simply flying rockets. In reality, keeping humans alive beyond low Earth orbit requires intricate systems engineering: closed-loop oxygen generation, water purification and recovery, hydroponic crop cultivation, power storage during extreme lunar nights or Martian dust storms, and shielding against cosmic radiation.
@@ -16,8 +14,6 @@ Young learners often imagine space exploration as simply flying rockets. In real
 - 🛰️ **Official NASA Integration:** Direct integration with the NASA Image and Video Library (`images-api.nasa.gov`) and authoritative planetary datasets.
 - 🤖 **AI Mission Mentor:** Real-time mission debriefing and guidance powered by Google Gemini (with an automated rule-based fallback).
 - 🏆 **Gamified Education & Persistence:** Seeded dynamic crisis events, scoring systems, achievements, and SQLite mission persistence.
-
----
 
 ## ✨ Key Features
 
@@ -40,8 +36,6 @@ Young learners often imagine space exploration as simply flying rockets. In real
 - **📑 Mission Debriefing & SQLite Storage**
   - Comprehensive end-of-mission performance report, achievements, and complete mission logs saved to local SQLite (`astraforge.db`).
 
----
-
 ## 🔬 How the Simulation Engine Works
 
 The core simulation lives in `src/shared/simulation.ts` and uses deterministic aerospace-inspired math:
@@ -52,8 +46,6 @@ The core simulation lives in `src/shared/simulation.ts` and uses deterministic a
 | **Solar & Power Balance** | Lunar arrays yield `46 kWh/day/tier` (with 14-day lunar night cycles). Martian arrays yield `26 kWh/day/tier` (~43% solar irradiance at ~1.52 AU, further diminished during dust storms). |
 | **Food & Hydroponics** | Hydroponic modules provide `1.85 rations/day` and `0.35 kg O₂/day/tier` while consuming water (`1.4 L/day`) and electricity (`11 kWh/day`). |
 | **Thermal & Radiation** | Habitat temperatures drift toward harsh planetary extremes without sufficient electrical power or thermal loops. Radiation shielding attenuates cosmic rays and solar particle events (SPE). |
-
----
 
 ## 🛠️ Tech Stack & Architecture
 
@@ -78,8 +70,6 @@ The core simulation lives in `src/shared/simulation.ts` and uses deterministic a
 | `/api/nasa/asset/:nasa_id` | `GET` | Inspect NASA media assets & captions |
 | `/api/learning/resources` | `GET` | Fetch educational science topics & quizzes |
 | `/api/learning/progress` | `POST` | Persist learning module progress |
-
----
 
 ## 🚀 Getting Started
 
@@ -128,18 +118,6 @@ The core simulation lives in `src/shared/simulation.ts` and uses deterministic a
    npm start
    ```
 
----
-
-## 🌐 Deployment
-
-ASTRAFORGE is pre-configured for deployment on platforms like **Render**, **Railway**, or **Heroku**:
-- A `render.yaml` blueprint is included in the root directory.
-- Build command: `npm install && npm run build`
-- Start command: `npm start`
-- Ensure `GEMINI_API_KEY` is added to your environment variables in your deployment dashboard.
-
----
-
 ## 📚 NASA Sources & Attribution
 
 - **NASA Image and Video Library:** [images-api.nasa.gov](https://images-api.nasa.gov/)
@@ -149,15 +127,11 @@ ASTRAFORGE is pre-configured for deployment on platforms like **Render**, **Rail
 - **NASA Space Place:** [spaceplace.nasa.gov](https://spaceplace.nasa.gov/)
 - **NASA Media Usage Guidelines:** [nasa.gov/nasa-brand-center/images-and-media](https://www.nasa.gov/nasa-brand-center/images-and-media/)
 
----
-
 ## 🤖 AI Acknowledgement & Ethics
 
 The educational Mission Mentor utilizes Google Gemini (`@google/genai`) to provide contextual science explanations based on active simulation telemetry.
 - Simulation physics and life-support calculations are strictly deterministic and never hallucinated by AI.
 - If no Gemini API key is provided, the application automatically activates a comprehensive, deterministic rule-based mentor system ensuring full functionality offline.
-
----
 
 ## 📜 License & Disclaimer
 
