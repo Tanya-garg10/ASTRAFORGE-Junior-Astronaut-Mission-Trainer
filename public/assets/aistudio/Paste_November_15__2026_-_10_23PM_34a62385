@@ -1,0 +1,990 @@
+Bilkul! ASTRAFORGE ko hum ek **complete, polished NASA Space Apps Challenge project** ki tarah build karenge — sirf landing page ya static dashboard nahi, balki ek playable lunar/Mars mission simulator.
+
+Neeche Antigravity ke liye master prompt hai. Isme UI/UX, frontend, backend, actual resource calculations, NASA ke official data/resources, images, videos, AI Mission Mentor, testing aur deployment sab cover kiya hai.
+
+**Important:** NASA ki images/videos ko sirf decoration ke liye nahi, balki mission learning experience ka part banana hai. NASA data ka source aur attribution bhi project ke andar visible hona chahiye. Jo feature implement na ho, uska fake demo ya false claim nahi banana.
+
+## **1. Antigravity Master Build Prompt**
+
+Copy the complete prompt below into Antigravity. Use Agent mode and ask it to create the project from scratch.
+
+# MASTER BUILD PROMPT — ASTRAFORGE
+
+## Junior Astronaut Mission Trainer | NASA Space Apps Challenge 2026
+
+Act as a senior full-stack engineer, space-science educator, simulation designer, UI/UX architect, and AI engineer.
+
+Build a complete, functional, production-quality educational web application named:
+
+ASTRAFORGE — JUNIOR ASTRONAUT MISSION TRAINER
+
+Tagline:\
+"Think Like an Engineer. Train Like an Astronaut. Build Beyond Earth."
+
+This is an interactive educational space mission simulator where students become mission commanders and learn how to establish and sustain a human outpost on the Moon or Mars.
+
+IMPORTANT:
+
+- Build a working application, not just a UI prototype.
+- Do not create fake buttons, placeholder charts, or non-functional interactions.
+- Every resource value must update based on actual simulation logic.
+- AI must explain and teach; it must not randomly decide mission success.
+- Clearly distinguish real NASA facts from illustrative simulation assumptions.
+- Do not claim that the simulator is a certified aerospace engineering model.
+- Do not invent NASA data, API responses, scientific measurements, or mission facts.
+- Work as a solo-developer-friendly project with clear setup instructions.
+
+\==================================================
+
+1. TECHNOLOGY STACK\
+   \==================================================
+
+Frontend:
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Recharts
+- Lucide React icons
+
+Backend:
+
+- Python
+- FastAPI
+- Pydantic
+- Simulation engine using Python
+- REST API
+
+AI:
+
+- Google Gemini API
+- Environment variable for API key
+- AI Mission Mentor
+- Context-aware explanations based on actual simulation state
+
+Data:
+
+- NASA Image and Video Library API
+- NASA official educational and scientific resources
+- Locally stored, documented simulation parameters
+- JSON configuration for scenarios and events
+
+Deployment:
+
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- Include production-ready configuration and environment variable documentation.
+
+If the full backend cannot be completed immediately, build the complete frontend and a working local simulation engine first. Do not leave the app dependent on an unavailable API.
+
+Create a premium, futuristic, immersive space exploration interface.
+
+Design direction:
+
+- Space-inspired but not a generic black dashboard.
+- Deep midnight navy for selected mission areas.
+- Warm white and soft grey for readable content sections.
+- Electric blue, cyan, violet, and subtle orange accents.
+- Beautiful gradients and restrained glow effects.
+- Premium glass panels where appropriate.
+- Large editorial typography.
+- Beautiful planetary imagery.
+- Subtle starfield and orbital animations.
+- Clean charts and interactive mission controls.
+- Smooth page transitions and micro-interactions.
+
+The interface should feel like a combination of:\
+NASA mission control + an educational strategy game + a premium science platform.
+
+Avoid:
+
+- Generic AI chatbot design.
+- Excessively dark screens.
+- Overloaded dashboards.
+- Random decorative charts.
+- Too many glowing elements.
+- Emoji-only navigation.
+- Fake data presented as real NASA data.
+
+Make the application fully responsive for desktop, tablet, and mobile.
+
+Build the following complete sections:
+
+A. LANDING PAGE
+
+Create a high-quality landing page with:
+
+- ASTRAFORGE branding.
+- Hero headline: "Your Mission. Your Decisions. Their Survival."
+- Subheading explaining the lunar and Martian outpost challenge.
+- NASA-inspired planetary background imagery sourced from official resources.
+- Primary CTA: START YOUR MISSION.
+- Secondary CTA: EXPLORE SPACE SCIENCE.
+- Mission statistics and feature highlights.
+- A preview of the mission control interface.
+- Educational impact section.
+- Footer with NASA data/media attribution and project credits.
+
+B. MISSION BRIEFING
+
+Before starting, show an interactive mission briefing.
+
+Allow users to choose:
+
+1. Destination:
+   - Moon
+   - Mars
+2. Crew size:
+   - 2 astronauts
+   - 4 astronauts
+   - 6 astronauts
+3. Mission duration:
+   - 10 days
+   - 30 days
+   - 60 days
+4. Difficulty:
+   - Explorer
+   - Mission Specialist
+   - Commander
+5. Initial resource budget:
+   - Limited
+   - Standard
+   - Advanced
+
+Show destination-specific environmental information based on NASA educational sources.
+
+Display a comparison between Moon and Mars:
+
+- Gravity
+- Atmosphere
+- Temperature conditions
+- Radiation challenges
+- Day/night cycle
+- Communication and logistics challenges
+
+Use correct, sourced information. Avoid presenting oversimplified or uncertain values as exact.
+
+C. OUTPOST BUILDER
+
+Create an interactive 2D/3D-style outpost construction experience.
+
+Allow the user to add or upgrade:
+
+- Habitat Module
+- Solar Power Array
+- Battery Storage
+- Greenhouse
+- Water Recycling Unit
+- Oxygen Generation System
+- Radiation Shielding
+- Thermal Control System
+- Emergency Shelter
+- Communication Antenna
+
+Each module must have:
+
+- Construction cost
+- Power consumption or generation
+- Resource impact
+- Capacity
+- Maintenance requirement
+- Scientific explanation
+
+When a user constructs an upgrade, deduct resources and update the simulation.
+
+Show a visual outpost layout. Do not make construction buttons decorative.
+
+D. MISSION CONTROL DASHBOARD
+
+This is the core application.
+
+Display six interconnected survival systems:
+
+1. OXYGEN
+2. WATER
+3. FOOD
+4. ENERGY
+5. RADIATION PROTECTION
+6. TEMPERATURE
+
+For every resource display:
+
+- Current level
+- Maximum capacity
+- Daily consumption
+- Daily production
+- Status indicator
+- Trend chart
+- Estimated remaining days
+
+Include:
+
+- Mission Day counter
+- Crew health indicator (educational simulation indicator)
+- Outpost condition
+- Mission stability score
+- Available construction resources
+- Active alerts
+- Mission progress
+
+Provide a time-control system:
+
+- Pause
+- Resume
+- Advance one day
+- Advance multiple days
+
+All metrics must be driven by the simulation engine.
+
+E. RESOURCE SIMULATION ENGINE
+
+Build a genuine deterministic simulation engine.
+
+Implement separate calculation functions for:
+
+- Oxygen consumption and production
+- Water consumption, storage, and recycling
+- Food consumption and greenhouse production
+- Solar power generation
+- Battery charging and discharge
+- Energy demand
+- Radiation exposure and shielding effectiveness
+- Habitat temperature and thermal control
+
+Model relationships between systems.
+
+Examples:
+
+- More greenhouse production increases food availability but also increases energy demand.
+- More radiation shielding improves modeled protection but requires construction resources.
+- Water recycling reduces water demand but consumes energy.
+- More crew members increase oxygen, water, food, and power requirements.
+- Solar power interruptions can reduce battery reserves.
+- Equipment failure can reduce production capacity.
+
+Use a configurable simulation model with documented assumptions.
+
+Do not invent precise real-world engineering constants. Clearly label educational coefficients as illustrative assumptions.
+
+Every action must update the state and show why the value changed.
+
+Create unit tests for important calculation functions.
+
+F. DYNAMIC MISSION EVENTS
+
+Create a scenario/event engine.
+
+Include events such as:
+
+- Solar Storm Warning
+- Dust Storm
+- Solar Panel Efficiency Drop
+- Water Recycling Failure
+- Greenhouse Crop Failure
+- Oxygen System Malfunction
+- Battery Storage Failure
+- Habitat Temperature Emergency
+- Communication Interruption
+- Supply Delay
+
+For each event:
+
+- Show a notification.
+- Explain the situation.
+- Show which resources are affected.
+- Provide 2–3 possible responses.
+- Calculate the consequences of the selected response.
+- Explain the outcome.
+
+Events should be scenario-based and reproducible using a seed or saved scenario configuration.
+
+Do not imply that every simulated event is a real-time NASA alert.
+
+G. EMERGENCY ROOM
+
+Create a dedicated emergency response interface.
+
+Show:
+
+- Emergency type
+- Severity
+- Affected systems
+- Time available to respond
+- Recommended actions
+- Available resources
+
+Allow students to choose a response.
+
+Explain the scientific reasoning behind the response and show the effect on mission resources.
+
+H. AI MISSION MENTOR
+
+Integrate Google Gemini API.
+
+Create an intelligent educational assistant named:
+
+MISSION MENTOR
+
+The mentor should receive:
+
+- Selected planet
+- Crew size
+- Mission day
+- Current resource values
+- Active emergency
+- Previous decisions
+- Simulation results
+
+It should explain:
+
+- Why oxygen is decreasing.
+- Why energy demand increased.
+- Why a solar storm affects the mission.
+- Why radiation shielding matters.
+- Why water recycling is important.
+- Which resource needs attention first.
+- How to improve the mission strategy.
+
+Add these features:
+
+- Explain My Decision
+- Give Me a Hint
+- Explain the Science
+- Compare Two Strategies
+- Ask a Question
+
+AI RULES:
+
+- Never invent NASA facts.
+- Use only verified reference material supplied to the AI.
+- Clearly state when a fact is an illustrative simulation assumption.
+- Never modify simulation values directly.
+- Never claim an action was completed unless the simulation engine confirms it.
+- If Gemini is unavailable, show a useful rule-based educational fallback.
+- Do not expose the Gemini API key in frontend code.
+
+I. WHAT-IF LAB
+
+Create an interactive strategy experiment.
+
+Let students change variables:
+
+- Crew size
+- Mission duration
+- Solar panel capacity
+- Greenhouse size
+- Water recycling efficiency
+- Radiation shielding level
+- Battery capacity
+
+Compare:
+
+- Original scenario
+- Modified scenario
+
+Display:
+
+- Resource projections
+- Energy balance
+- Survival risk indicators
+- Mission stability
+- Major trade-offs
+
+Use actual simulation calculations.
+
+Show charts for both scenarios.
+
+J. MISSION REPORT
+
+At the end of a mission, generate a complete report.
+
+Include:
+
+- Mission destination
+- Crew size
+- Duration
+- Final resource status
+- Major events
+- Decisions made
+- Mission outcome
+- Mission score
+- Learning achievements
+- Improvement recommendations
+
+Possible outcomes:
+
+- Mission Accomplished
+- Mission Accomplished with Challenges
+- Mission Requires Improvement
+- Mission Failed
+
+Explain why the outcome occurred.
+
+Include a Restart Mission option.
+
+This section is extremely important.
+
+Use official NASA resources to make ASTRAFORGE scientifically grounded and visually authentic.
+
+Do not just paste NASA website links into the footer. Integrate NASA resources into the actual application.
+
+A. NASA IMAGE AND VIDEO LIBRARY
+
+Official website:\
+[https://images.nasa.gov/](https://images.nasa.gov/)
+
+API base:\
+[https://images-api.nasa.gov](https://images-api.nasa.gov)
+
+Documentation:\
+[https://api.nasa.gov/](https://api.nasa.gov/)
+
+Implement NASA multimedia search using the API.
+
+Suggested API searches:
+
+- Moon surface
+- Lunar exploration
+- Apollo lunar surface
+- Mars landscape
+- Mars rover
+- Mars Perseverance
+- Astronaut spacewalk
+- Solar storm
+- Space habitat
+- International Space Station
+
+Use this endpoint pattern:
+
+GET [https://images-api.nasa.gov/search?q=Moon&media_type=image](https://images-api.nasa.gov/search?q=Moon\&media_type=image)
+
+For video search:
+
+GET [https://images-api.nasa.gov/search?q=Mars&media_type=video](https://images-api.nasa.gov/search?q=Mars\&media_type=video)
+
+For a specific NASA asset:
+
+GET [https://images-api.nasa.gov/asset/{nasa_id}](https://images-api.nasa.gov/asset/{nasa_id)
+
+For metadata:
+
+GET [https://images-api.nasa.gov/metadata/{nasa_id}](https://images-api.nasa.gov/metadata/{nasa_id)
+
+For captions:
+
+GET [https://images-api.nasa.gov/captions/{nasa_id}](https://images-api.nasa.gov/captions/{nasa_id)
+
+Implement the following features:
+
+1. NASA image gallery.
+2. Destination-specific image collections.
+3. Image cards with title, description, NASA ID, and source.
+4. Image detail modal.
+5. Video gallery.
+6. Video preview or supported embedded player.
+7. Open Original NASA Asset link.
+8. Loading states.
+9. Error states.
+10. Fallback images from verified NASA resources.
+
+Do not assume every asset has a playable video URL.
+
+Inspect the asset manifest and select a supported video file when available.
+
+If no suitable video file is available, link to the original NASA media page instead of creating a broken player.
+
+Add a "NASA MEDIA SOURCE" label to each item.
+
+B. VISUAL PLACEMENT OF NASA MEDIA
+
+Use appropriate NASA imagery in:
+
+- Landing page: Moon/Mars hero imagery.
+- Mission briefing: destination comparison.
+- Moon mission: lunar surface and lunar exploration images.
+- Mars mission: Mars landscape and rover imagery.
+- Outpost builder: habitat and surface environment inspiration.
+- Mission events: relevant solar storm and dust storm visuals.
+- Learning library: NASA image and video gallery.
+- Mission report: destination image and mission summary.
+
+Use high-quality images with correct aspect ratios.
+
+Never use a random image as if it represents a particular scientific event.
+
+C. NASA SCIENCE AND EDUCATIONAL RESOURCES
+
+Use the following official resources as research references:
+
+NASA Moon Facts:\
+[https://science.nasa.gov/moon/facts/](https://science.nasa.gov/moon/facts/)
+
+NASA Mars Facts:\
+[https://science.nasa.gov/mars/facts/](https://science.nasa.gov/mars/facts/)
+
+NASA Moon Exploration:\
+[https://science.nasa.gov/moon/exploration/](https://science.nasa.gov/moon/exploration/)
+
+NASA Mars Exploration:\
+[https://science.nasa.gov/mars/exploration/](https://science.nasa.gov/mars/exploration/)
+
+NASA Space Place:\
+[https://spaceplace.nasa.gov/](https://spaceplace.nasa.gov/)
+
+NASA Moon Trek:\
+[https://trek.nasa.gov/moon/](https://trek.nasa.gov/moon/)
+
+NASA Mars Trek:\
+[https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)
+
+Use these resources to create short, age-appropriate educational explanations.
+
+Add source links beside relevant facts.
+
+Do not copy large sections of NASA articles. Summarize in original language and link to the source.
+
+D. NASA DATA INTEGRATION RULES
+
+Use real NASA data only when the relevant API or dataset supports the required measurement.
+
+Do not:
+
+- Present Earth weather data as Mars weather.
+- Present Earth solar data as lunar surface measurements.
+- Invent radiation readings.
+- Claim simulated events are live NASA alerts.
+- Claim a static image is live satellite imagery.
+- Present illustrative survival calculations as NASA-certified engineering calculations.
+
+If using NASA POWER:\
+[https://power.larc.nasa.gov/](https://power.larc.nasa.gov/)
+
+Clearly identify its Earth-based solar and meteorological context. Do not use it as direct lunar or Martian environmental measurement data.
+
+The Moon/Mars mission simulation can use documented illustrative coefficients based on scientific research, with links to NASA references.
+
+E. NASA ATTRIBUTION
+
+Create a dedicated "Data & Media Sources" page.
+
+For every NASA image or video, store:
+
+- Title
+- NASA ID
+- Media type
+- Original asset URL
+- NASA source page
+- Creator/credit information if available
+- Copyright or third-party restrictions if listed
+
+Show appropriate attribution near the media and in the source page.
+
+Follow NASA media usage guidelines:\
+[https://www.nasa.gov/nasa-brand-center/images-and-media/](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+
+Do not use NASA logos or insignia in a way that implies NASA endorsement or official affiliation.
+
+Add this disclaimer:
+
+"ASTRAFORGE is an independent educational project created for the NASA Space Apps Challenge. It is not an official NASA product and is not endorsed by NASA. NASA resources are credited to their respective sources."
+
+Build a dedicated educational library.
+
+Topics:
+
+- How astronauts breathe in space.
+- How water is recycled.
+- How food can be grown in space.
+- Why radiation shielding matters.
+- How solar power works on the Moon and Mars.
+- Why Mars and Moon environments are different.
+- How habitats maintain safe temperatures.
+- Why mission planning requires trade-offs.
+
+Each learning topic should contain:
+
+- Short explanation
+- Relevant NASA image
+- Optional NASA video
+- Key facts
+- Source links
+- A small knowledge-check question
+
+Add a quiz at the end of each learning module.
+
+Create structured FastAPI endpoints.
+
+Suggested endpoints:
+
+GET /api/health
+
+POST /api/mission/create
+
+GET /api/mission/{mission_id}
+
+POST /api/mission/{mission_id}/advance
+
+POST /api/mission/{mission_id}/build
+
+POST /api/mission/{mission_id}/respond
+
+GET /api/mission/{mission_id}/report
+
+POST /api/simulation/what-if
+
+POST /api/mentor/explain
+
+GET /api/nasa/search
+
+GET /api/nasa/asset/{nasa_id}
+
+GET /api/learning/resources
+
+Implement:
+
+- Input validation
+- Error handling
+- API documentation
+- CORS configuration
+- Environment variables
+- Proper response schemas
+
+Keep NASA API calls separated from simulation calculations.
+
+If NASA media search fails, the rest of the simulator must continue working.
+
+Create a simple persistent storage approach suitable for a hackathon MVP.
+
+Store:
+
+- Mission configurations
+- Mission state
+- Construction decisions
+- Mission events
+- Mission reports
+- Learning progress
+
+Use SQLite for the initial implementation.
+
+Do not require account registration for the core experience.
+
+Allow a student to continue a saved mission on the same browser/device if feasible.
+
+Every page must have:
+
+- Consistent navigation
+- Breadcrumbs where appropriate
+- Clear page titles
+- Helpful empty states
+- Loading indicators
+- Error messages
+- Tooltips for scientific terms
+- Accessible contrast
+- Keyboard-friendly controls
+
+Create reusable components:
+
+- ResourceCard
+- ResourceTrendChart
+- MissionStatus
+- EventAlert
+- ConstructionCard
+- NASAImageCard
+- NASAVideoCard
+- MentorPanel
+- MissionReportCard
+- PlanetComparisonCard
+
+Use Framer Motion for subtle transitions.
+
+Use Recharts for real simulation history and projections.
+
+Do not generate random charts just to fill empty space.
+
+Before declaring the project complete:
+
+- Run frontend build.
+- Run backend tests.
+- Test every API endpoint.
+- Test mission creation.
+- Test resource calculations.
+- Test construction cost deductions.
+- Test time advancement.
+- Test emergency responses.
+- Test mission failure conditions.
+- Test mission completion.
+- Test What-If comparison.
+- Test NASA image search.
+- Test NASA video search.
+- Test API failure fallback.
+- Test Gemini unavailable fallback.
+- Test mobile responsiveness.
+
+Fix all critical errors.
+
+Do not leave broken navigation or non-functional CTAs.
+
+Generate a professional README.md with:
+
+1. Project title and tagline.
+2. Project overview.
+3. Problem statement.
+4. Our solution.
+5. Key features.
+6. How the simulation works.
+7. NASA resources used.
+8. NASA image and video integration.
+9. Technology stack.
+10. System architecture.
+11. Installation instructions.
+12. Environment variables.
+13. How to run frontend.
+14. How to run backend.
+15. Testing instructions.
+16. Deployment instructions.
+17. Screenshots section.
+18. Data sources and attribution.
+19. SI/AI usage acknowledgement.
+20. Disclaimer.
+
+Also create:
+
+- requirements.txt
+- package.json
+- .env.example
+- .gitignore
+- render.yaml if suitable
+- API documentation
+- Architecture diagram
+- Simulation assumptions documentation
+- NASA sources and attribution file
+
+Do not put API keys or secrets in GitHub.
+
+ASTRAFORGE must feel like a complete educational space simulation product.
+
+The most important priorities are:
+
+1. A visually impressive and polished experience.
+2. A genuinely playable Moon/Mars mission.
+3. Real resource-management calculations.
+4. Meaningful engineering trade-offs.
+5. NASA-backed educational content and media.
+6. Useful AI explanations.
+7. A What-If experiment.
+8. A clear mission report.
+9. Working APIs and robust fallbacks.
+10. Transparent sources, assumptions, and attribution.
+
+Build the application in phases, but continue until the complete working MVP is implemented.
+
+PHASE 1: Project structure and design system.\
+PHASE 2: Landing page and mission briefing.\
+PHASE 3: Simulation engine and backend.\
+PHASE 4: Outpost builder and mission control.\
+PHASE 5: Emergency events and What-If Lab.\
+PHASE 6: NASA media and learning library.\
+PHASE 7: AI Mission Mentor.\
+PHASE 8: Mission report and persistence.\
+PHASE 9: Testing, documentation, and deployment.
+
+After every phase:
+
+- Run the application.
+- Check for errors.
+- Fix issues before continuing.
+
+Do not stop after generating a plan. Implement the actual code.
+
+At the end, provide:
+
+- Completed feature checklist.
+- Exact commands to run the application.
+- Required environment variables.
+- Any features that remain incomplete.
+- Any NASA data or API integration that could not be verified.
+
+The final result should be ready for a public hackathon demonstration, subject to the developer supplying API keys and deploying the application.
+
+## **2. NASA resources — exactly where to use them**
+
+These are the official resources I recommend integrating. Each has a different purpose.
+
+[Frame Counter and Wrist Mirror](https://images.openai.com/static-rsc-4/tixIW-o7w-tqhhrZLmYGqcRNh5p37B_kb9d5bOr38oEDrXQQZ35uTJMtfIK3YRBJsMgStHHJNDpV-gs4mSNoHU4dJdvV_CuP-LgjWENmCb6R2_TrmMtbsRVjQBv1oIRTqVXQGlPkZhGwtQ32z_RLp8E_y3S_8ayGGcEyfb4LaCA?purpose=inline)
+
+**1. NASA Image and Video Library**
+
+Must integrate
+
+- Moon, Mars, astronaut, rover images
+- Mission videos and media metadata
+- API: `https://images-api.nasa.gov/search?q=Moon&media_type=image`
+
+[Explore NASA media library](https://images.nasa.gov/?utm_source=chatgpt.com) ·&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://api.nasa.gov\&sz=32)
+
+api.nasa.gov+1
+
+
+
+[Perseverance's Mastcam-Z First High-Resolution Panorama - NASA Science](https://images.openai.com/static-rsc-4/LqJQgbhm18KPVrP0F43uYK7DSoqG-gMJ7TgUlv6kDtmoTOG5BlW9QUK52VgrUJanm8l0KmL6IYj1cpU4NXW60aM5jup3ztoN7pjZynFY73Rlz5-mTvbOnhEPi-hA5zv9l_Xpq6bXkIvpK2FwlOJSziyvIhaT9OQv49P9Ictlszs?purpose=inline)
+
+**2. NASA Mars Facts and Exploration**
+
+- Mars environment and exploration learning content
+- Mars mission briefing and educational cards
+
+[NASA Mars Facts](https://science.nasa.gov/mars/facts/?utm_source=chatgpt.com) · [NASA Mars Exploration](https://science.nasa.gov/mars/exploration/?utm_source=chatgpt.com)
+
+[Record-Holding Moon Mission Marks a Decade in Orbit | Space](https://images.openai.com/static-rsc-4/5XGHp862OzrTsd15dmGzG-XgWhE6F8vFW-shc3UuWjNQs92KA3pVbZ6Dx5z0UEESI8EvVt27B_uSJBccNlY93W-IvVkYW56b91vons9A8sodXWDnnM6y2xTlEL1tHbA_SDqu9nY_Ymy0PV_8bchk2l_Ah5blmpA8ainux3By9iQ?purpose=inline)
+
+**3. NASA Moon Facts and Exploration**
+
+- Lunar environment facts
+- Moon mission briefing and comparison
+- Moon surface learning content
+
+[NASA Moon Facts](https://science.nasa.gov/moon/facts/?utm_source=chatgpt.com) · [NASA Moon Exploration](https://science.nasa.gov/moon/exploration/?utm_source=chatgpt.com)
+
+[Observe the Moon at Home](https://images.openai.com/static-rsc-4/LlEo9iRFkqrcPRC0j9i8T6BQqlqkxxVCsIcYugJVB0UpS_NMnT5NIDi4cIxX-mARaWxtanVdPDbeMupKqE6Xtga4AFPiX_Esm3hkk-1F1bDwaCK6c6K8tbGiiH1Urlzm_wvxkGFNjcWOIarEEuqks4XP3K_JFiZ_etXKmJqM5uA?purpose=inline)
+
+**4. NASA Moon Trek and Mars Trek**
+
+- Planetary terrain exploration
+- Surface map inspiration
+- Destination learning experience
+
+[Moon Trek](https://trek.nasa.gov/moon/?utm_source=chatgpt.com) · [Mars Trek](https://trek.nasa.gov/mars/?utm_source=chatgpt.com)
+
+[Researchers Examine How We Could Achieve Sustainable Water Systems for Space - New Space Economy](https://images.openai.com/static-rsc-4/ulbjfVluWairLHdTyAin-bybe4RQGghii-KvQLF0s2oHilBdjT46_CnZrzDlUBsD-EkJ-rTOZWva78epFbxfY55nSh573pD6GKouAXSM_26XKvQmySiLzU9EJtzkCXJm90Zg5a5pUg_vtRjlRbHAOZX0FA2U0cI2_0_jpW7PXPc?purpose=inline)
+
+**5. NASA Space Place**
+
+- Student-friendly scientific explanations
+- Learning modules and quizzes
+
+[Explore NASA Space Place](https://spaceplace.nasa.gov/?utm_source=chatgpt.com)
+
+NASA's multimedia library has a searchable API for images, videos and audio. The app should fetch the actual asset metadata and manifest instead of assuming every search result has a playable video.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://api.nasa.gov\&sz=32)
+
+api.nasa.gov+1
+
+
+
+## **3. Images and videos ka actual implementation**
+
+Antigravity ko specifically ye experience banana hai:
+
+**NASA Exploration Gallery**
+
+[NASA astronaut collects Moon rock | ESO Supernova](https://images.openai.com/static-rsc-4/KneKdtTZMATTVSR_yORoILSb6GLe-dfCzMQLiikYXy7Q7qk4-va66Dm7anfjw6pIM_EciuBOmZoyBOEBKHuAEEOq11kBtWNtRa9nQCTUPslucNsT7C0ll6hrLkDSlA3qtamjPCdTUybOFLNJtTixFTPuEKz7S0zKBofE9flbsaE?purpose=inline)
+
+**Moon Collection**
+
+Lunar surface · Apollo · Moon exploration
+
+[NASA Mars rover captures panoramic view of landing site | Science, Climate & Tech News | Sky News](https://images.openai.com/static-rsc-4/h3JKHldTKAIljes_S7p8HG-vaVhehQJRqYZU703vgtX6N8plX3xnxlyRfgUQrIHtopGrQ3lRgG7UvjJ6qZN1EponCjMrQJ3ItQSyJq9go0WNpIMHPlQqEKS-0xi5nyISk4LG2p2aJXlUvz3MGu-B7TjoIyZy7xZSg57QambQSYs?purpose=inline)
+
+**Mars Collection**
+
+Rovers · Mars landscape · Exploration
+
+[International Space Station - NASA](https://images.openai.com/static-rsc-4/bDCmBUeIEQl9nD3Qw7NjYVGLkxhD_dEHttE0_6jJOlgydfGMlkjfjFpGs7LUBKLg_vZjxQfBpWDVqeNZaOUfxFQIhyjFJtsvCNfyDOKVSN_ELRWjXYbo0Euc1aXUqcR7nOMq-E9vwfcco1GPWIhjEf4mLK5QGhl0VguLAflWE6E?purpose=inline)
+
+**Astronaut Life**
+
+Space habitats · Crew · Life support
+
+[NASA SVS | Giant Sunspot Continues to Erupt with Substantial Flares](https://images.openai.com/static-rsc-4/MNg7JweXsHjiL4ZI-wHFxKGJNiJJ6yioDkbk1BbeNjImnccPgw3nRuiwMWTvatRA88D4ldbApyJm1Xmt8mVS3Vy67t9FWWwLAEQEIzxIw3Zin4TJz1UPKmQOM_Stg56GkBINcKr7rw_QFoQBAAb7eDf272JzlGXLCgfCJcmMLgU?purpose=inline)
+
+**Space Weather**
+
+Solar activity · Radiation learning
+
+These are visual examples of the intended gallery. The actual application should retrieve and credit the selected assets through NASA's library.
+
+**Video section mein:**
+
+- NASA Mars exploration video
+- Moon landing/exploration footage
+- Astronaut life-support related footage
+- Solar activity educational videos
+
+Video ke liye original NASA media source, title, available captions aur credit display karna. Broken video player ki jagah "Watch on NASA" link dikhana.
+
+NASA imagery generally educational/informational use ke liye available hoti hai, lekin third-party credited media par separate restrictions ho sakti hain. NASA logo/insignia ko official endorsement imply karne ke liye use mat karna.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nasa.gov\&sz=32)
+
+NASA+1
+
+
+
+## **4. Build karne ka order**
+
+Ek hi baar mein poora project generate karne ke bajay Antigravity ko phases mein complete karwana. Isse bugs aur incomplete features kam honge.
+
+| Phase | Kya complete hona chahiye            |
+| ----- | ------------------------------------ |
+| 1     | Premium landing page + design system |
+| 2     | Moon/Mars mission selection          |
+| 3     | Actual simulation engine             |
+| 4     | Outpost builder + Mission Control    |
+| 5     | Emergency events + What-If Lab       |
+| 6     | NASA image/video integration         |
+| 7     | Gemini Mission Mentor                |
+| 8     | Mission report + saved progress      |
+| 9     | Testing + deployment                 |
+
+**Meri recommendation:** Sabse pehle Phase 1–5 ko properly functional banao. NASA media gallery aur AI Mentor ke baad integration karo. Project ka strongest part actual resource simulation hona chahiye, sirf NASA images aur chatbot nahi.
+
+## **5. API keys and setup**
+
+**Google Gemini API**
+
+Mission Mentor ke liye. API key backend environment variable mein rakhna.
+
+[Get Gemini API key](https://aistudio.google.com/apikey?utm_source=chatgpt.com)
+
+**NASA API**
+
+NASA APIs explore karne aur API key lene ke liye.
+
+[NASA Open APIs](https://api.nasa.gov/?utm_source=chatgpt.com)
+
+**NASA Image and Video API**
+
+NASA multimedia search ke liye. Is API ko integrate karte waqt response manifest aur media type validate karna.
+
+[NASA Image and Video Library](https://images.nasa.gov/?utm_source=chatgpt.com)
+
+NASA API ki kuch services key use karti hain aur limits vary kar sakti hain. Image/video library ke liye separate NASA API key assume mat karna; documented endpoints ke according integration karna.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://api.nasa.gov\&sz=32)
+
+api.nasa.gov+1
+
+
+
+## **6. Antigravity ke liye final instruction**
+
+Master prompt dene ke baad ye additional instruction bhi dena:
+
+Start implementing ASTRAFORGE now. Do not just explain the architecture or generate a static prototype.
+
+First inspect the project workspace. Create the complete folder structure and implement Phase 1. Run the application and verify it in the browser.
+
+Then continue phase by phase until the functional MVP is complete.
+
+Prioritize real simulation calculations, meaningful user interactions, NASA media integration, and polished UI/UX.
+
+Do not use fake NASA data, random charts, broken image URLs, or non-functional buttons. If a NASA API or Gemini integration cannot be verified, implement a clear fallback and document the limitation.
+
+After each phase, show me what was implemented, which files were created, and whether the application runs successfully.
+
+**Ek important hackathon point:** NASA resources ka use sirf images lagane tak limited mat rakhna. Moon/Mars ke actual scientific differences ko mission scenarios, resource assumptions, educational explanations aur decision-making mein connect karna. Isi se ASTRAFORGE ek normal space-themed website se genuinely educational mission trainer banega.

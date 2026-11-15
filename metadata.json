@@ -1,0 +1,6 @@
+{
+  "name": "ASTRAFORGE — Junior Astronaut Mission Trainer",
+  "description": "Interactive educational space mission simulator for lunar and Martian outpost engineering, survival resource management, NASA media exploration, and AI-guided space science.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
