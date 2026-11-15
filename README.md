@@ -1,106 +1,166 @@
-# ASTRAFORGE — Junior Astronaut Mission Trainer
+# 🚀 ASTRAFORGE — Junior Astronaut Mission Trainer
 
-**"Think Like an Engineer. Train Like an Astronaut. Build Beyond Earth."**
+> **"Think Like an Engineer. Train Like an Astronaut. Build Beyond Earth."**
 
-Built for the **NASA Space Apps Challenge 2026**, ASTRAFORGE is an interactive educational space mission simulator where students act as outpost commanders establishing and sustaining a human habitat on the **Moon** or **Mars**.
-
----
-
-## 1. Project Overview & Problem Statement
-
-Young learners often view space exploration as purely piloting rockets rather than solving interconnected life-support and systems-engineering challenges. Keeping astronauts alive beyond Earth requires balancing closed-loop oxygen generation, water recovery, food cultivation, solar power, thermal regulation, and radiation shielding under strict mass and power budgets.
-
-**ASTRAFORGE's Solution:** A playable, deterministic Lunar and Martian outpost trainer combining real resource-management equations, seeded crisis scenarios, a side-by-side What-If engineering lab, official NASA multimedia & science resources, and an educational AI Mission Mentor.
+ASTRAFORGE is an interactive educational space mission simulator designed for students, educators, and space enthusiasts. Step into the boots of an outpost commander to design, build, and sustain a human habitat on the **Moon** or **Mars** while balancing critical life-support systems, power budgets, and unexpected space emergencies.
 
 ---
 
-## 2. Key Features
+## 🌟 Highlights & Overview
 
-- **Mission Briefing & Planetary Comparison:** Configure Destination (Moon / Mars), Crew Size (2 / 4 / 6), Duration (10 / 30 / 60 days), Difficulty, Initial Budget, and reproducible Scenario Seed alongside sourced NASA Moon vs. Mars comparisons.
-- **Interactive Outpost Builder:** Construct and upgrade 10 outpost modules (Habitat, Solar Array, Battery Storage, Hydroponic Greenhouse, Water Recycler, Oxygen Generator, Radiation Shielding, Thermal Control, Emergency Storm Shelter, Deep Space Comms Antenna) with live resource-budget deductions.
-- **Mission Control Dashboard:** Real-time tracking of 6 coupled survival systems (Oxygen, Water, Food, Energy, Radiation Protection, Temperature), Recharts history graphs, time-advance controls (Pause, Resume, +1 Day, +3 Days), and transparent causal explanations.
-- **Dynamic Mission Events & Emergency Room:** 10 seeded anomaly scenarios (Solar Storm, Martian Dust Storm, Water Distillation Fault, Electrolyzer Malfunction, Hydroponic Imbalance, Thermal Coolant Drop, etc.) with multi-choice scientific responses.
-- **What-If Experiment Lab:** Side-by-side comparison of Baseline vs. Modified outpost configurations showing bottleneck shifts and coupled trade-offs.
-- **AI Mission Mentor:** Server-side Google Gemini integration (`@google/genai` `gemini-4-hydrogen`) with telemetry context and a deterministic rule-based educational fallback if `GEMINI_API_KEY` is unavailable.
-- **Space Science Library & NASA Media Explorer:** 8 interactive learning modules with persisted knowledge-check quizzes plus live search and manifest inspection against the NASA Image and Video Library API (`images-api.nasa.gov`).
-- **Mission Report & SQLite Persistence:** End-of-mission scoring, achievements, recommendations, decision logs, and local SQLite persistence (`astraforge.db`).
+Young learners often imagine space exploration as simply flying rockets. In reality, keeping humans alive beyond low Earth orbit requires intricate systems engineering: closed-loop oxygen generation, water purification and recovery, hydroponic crop cultivation, power storage during extreme lunar nights or Martian dust storms, and shielding against cosmic radiation.
 
----
-
-## 3. How the Simulation Engine Works
-
-All calculations live in `src/shared/simulation.ts` using deterministic, documented illustrative coefficients (clearly distinguished from certified aerospace engineering constants):
-
-- **Water & Oxygen Coupling:** Crew consume water (`3.6 L/person/day`) and oxygen (`0.84 kg/person/day`). The Water Recycling Unit recovers 72%–95% of wastewater depending on upgrade level, while the Oxygen Generation System consumes both electricity and water (`~1.12 L H₂O per kg O₂`) via electrolysis.
-- **Solar & Energy Balance:** Moon Solar Arrays generate `46 kWh/day` per level (with periodic 14-day crater-rim shadow dips), whereas Mars arrays generate `26 kWh/day` per level (~43% solar irradiance at ~1.52 AU, attenuated further by dust storms).
-- **Greenhouse Trade-Off:** Hydroponic bays produce `1.85 rations/day` and `0.35 kg O₂/day` per level while drawing `11 kWh/day` and `1.4 L/day` water.
-- **Thermal & Radiation:** Habitat temperatures drift toward planetary extremes if electrical power or Thermal Control authority drops; Radiation Shielding and Emergency Storm Shelters attenuate modeled cosmic and solar-storm doses.
+**ASTRAFORGE bridges this gap with:**
+- ⚙️ **Deterministic Systems-Engineering Simulation Engine:** Realistic life-support equations modeled after aerospace principles.
+- 🧪 **What-If Experimentation Lab:** Compare baseline habitats with modified designs side-by-side to understand engineering trade-offs.
+- 🛰️ **Official NASA Integration:** Direct integration with the NASA Image and Video Library (`images-api.nasa.gov`) and authoritative planetary datasets.
+- 🤖 **AI Mission Mentor:** Real-time mission debriefing and guidance powered by Google Gemini (with an automated rule-based fallback).
+- 🏆 **Gamified Education & Persistence:** Seeded dynamic crisis events, scoring systems, achievements, and SQLite mission persistence.
 
 ---
 
-## 4. NASA Resources & Attribution
+## ✨ Key Features
 
-- **NASA Image and Video Library API:** `https://images-api.nasa.gov/search`, `/asset/{nasa_id}`, `/metadata/{nasa_id}`, `/captions/{nasa_id}`
-- **NASA Moon Facts & Exploration:** `https://science.nasa.gov/moon/facts/`, `https://science.nasa.gov/moon/exploration/`
-- **NASA Mars Facts & Exploration:** `https://science.nasa.gov/mars/facts/`, `https://science.nasa.gov/planetary-science/programs/mars-exploration/`
-- **NASA Moon Trek & Mars Trek:** `https://trek.nasa.gov/moon/`, `https://trek.nasa.gov/mars/`
-- **NASA Space Place:** `https://spaceplace.nasa.gov/`
-- **NASA Media Usage Guidelines:** `https://www.nasa.gov/nasa-brand-center/images-and-media/`
+- **🪐 Mission Setup & Planetary Comparison**
+  - Choose between **Moon** and **Mars** with sourced NASA planetary science (gravity, day/night cycles, atmosphere, solar irradiance).
+  - Configure crew sizes (2, 4, 6), mission duration (10, 30, 60 days), difficulty modes, and custom scenario seeds.
+- **🏗️ Interactive Outpost Builder**
+  - Construct and level up 10 vital outpost modules:
+    - *Habitat Core, Solar Array, Battery Bank, Hydroponic Bay, Water Recycler, Oxygen Generator, Radiation Shielding, Thermal Control System, Emergency Shelter, and Deep Space Comms.*
+- **📊 Real-Time Mission Control Dashboard**
+  - Monitor 6 interconnected survival systems: **Oxygen**, **Water**, **Food**, **Energy**, **Radiation Protection**, and **Temperature**.
+  - Interactive Recharts trend charts and intuitive time-controls (Step Day, Fast Forward, Pause).
+- **🚨 Dynamic Crisis Scenarios & Decision Center**
+  - Handle 10 scientific anomaly events (solar flares, Martian dust storms, electrolyzer malfunctions, coolant leaks, etc.) with multiple choice crisis responses.
+- **🔬 What-If Engineering Lab**
+  - Benchmark module configurations against modified setups to identify bottlenecks and resource vulnerabilities before they occur.
+- **📚 Space Science Library & NASA Media Explorer**
+  - 8 interactive educational modules covering ECLSS, in-situ resource utilization (ISRU), planetary geology, and rocketry with interactive knowledge quizzes.
+  - Live search and high-resolution asset explorer via NASA's API.
+- **📑 Mission Debriefing & SQLite Storage**
+  - Comprehensive end-of-mission performance report, achievements, and complete mission logs saved to local SQLite (`astraforge.db`).
 
 ---
 
-## 5. Technology Stack & Architecture
+## 🔬 How the Simulation Engine Works
 
-- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS v4, Recharts, Lucide React, Motion (`framer-motion` successor package `motion/react`)
+The core simulation lives in `src/shared/simulation.ts` and uses deterministic aerospace-inspired math:
+
+| System | Scientific Basis & Simulation Mechanics |
+| :--- | :--- |
+| **Oxygen & Water Coupling** | Baseline crew consumption: `0.84 kg O₂/person/day` and `3.6 L H₂O/person/day`. Water recyclers reclaim up to 95% of wastewater. Oxygen generation via electrolysis consumes `~1.12 L H₂O per kg O₂`. |
+| **Solar & Power Balance** | Lunar arrays yield `46 kWh/day/tier` (with 14-day lunar night cycles). Martian arrays yield `26 kWh/day/tier` (~43% solar irradiance at ~1.52 AU, further diminished during dust storms). |
+| **Food & Hydroponics** | Hydroponic modules provide `1.85 rations/day` and `0.35 kg O₂/day/tier` while consuming water (`1.4 L/day`) and electricity (`11 kWh/day`). |
+| **Thermal & Radiation** | Habitat temperatures drift toward harsh planetary extremes without sufficient electrical power or thermal loops. Radiation shielding attenuates cosmic rays and solar particle events (SPE). |
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS v4, Recharts, Lucide React, Motion (`motion/react`)
 - **Backend:** Node.js, Express (`server.ts`), SQLite (`better-sqlite3`), Google GenAI SDK (`@google/genai`)
 - **Testing:** Vitest (`src/shared/simulation.test.ts`)
 
-### REST API Endpoints
-- `GET /api/health`
-- `POST /api/mission/create`
-- `GET /api/mission/:mission_id`
-- `POST /api/mission/:mission_id/advance`
-- `POST /api/mission/:mission_id/build`
-- `POST /api/mission/:mission_id/respond`
-- `GET /api/mission/:mission_id/report`
-- `POST /api/simulation/what-if`
-- `POST /api/mentor/explain`
-- `GET /api/nasa/search`
-- `GET /api/nasa/asset/:nasa_id`
-- `GET /api/learning/resources` & `POST /api/learning/progress`
+### API Architecture
+
+| Endpoint | Method | Description |
+| :--- | :---: | :--- |
+| `/api/health` | `GET` | Health check & system status |
+| `/api/mission/create` | `POST` | Initialize a new mission profile |
+| `/api/mission/:mission_id` | `GET` | Fetch current mission state & telemetry |
+| `/api/mission/:mission_id/advance` | `POST` | Advance mission time (step 1 or 3 days) |
+| `/api/mission/:mission_id/build` | `POST` | Build or upgrade habitat modules |
+| `/api/mission/:mission_id/respond` | `POST` | Submit response to active crisis events |
+| `/api/mission/:mission_id/report` | `GET` | Retrieve final mission summary & score |
+| `/api/simulation/what-if` | `POST` | Run comparative sandbox simulations |
+| `/api/mentor/explain` | `POST` | Query AI Mission Mentor for telemetry analysis |
+| `/api/nasa/search` | `GET` | Query NASA Image & Video Library |
+| `/api/nasa/asset/:nasa_id` | `GET` | Inspect NASA media assets & captions |
+| `/api/learning/resources` | `GET` | Fetch educational science topics & quizzes |
+| `/api/learning/progress` | `POST` | Persist learning module progress |
 
 ---
 
-## 6. Installation, Running & Testing
+## 🚀 Getting Started
 
-```bash
-# 1. Install dependencies
-npm install
+### Prerequisites
+- **Node.js** (v20+ recommended)
+- **npm**, **bun**, or **pnpm**
+- *(Optional)* A [Google Gemini API Key](https://aistudio.google.com/) for AI mentor features.
 
-# 2. Configure environment variables (copy .env.example -> .env and set GEMINI_API_KEY)
-cp .env.example .env
+### Installation
 
-# 3. Run unit tests
-npm test
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Tanya-garg10/ASTRAFORGE-Junior-Astronaut-Mission-Trainer.git
+   cd ASTRAFORGE-Junior-Astronaut-Mission-Trainer
+   ```
 
-# 4. Run full-stack development server (Express + Vite on port 3000)
-npm run dev
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-# 5. Build for production & run production server
-npm run build
-npm start
-```
+3. **Configure Environment Variables:**
+   Create a `.env` file based on `.env.example`:
+   ```bash
+   cp .env.example .env
+   ```
+   Add your Gemini API key (optional — app will gracefully use deterministic rule-based mentor advice if left blank):
+   ```env
+   GEMINI_API_KEY="your-gemini-api-key"
+   ```
+
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser at `http://localhost:3000`.
+
+5. **Run Tests:**
+   ```bash
+   npm test
+   ```
+
+6. **Build for Production:**
+   ```bash
+   npm run build
+   npm start
+   ```
 
 ---
 
-## 7. Deployment (Render)
+## 🌐 Deployment
 
-Use the included `render.yaml` to deploy as a Node.js Web Service (`npm install && npm run build`, start command `npm start`) with `GEMINI_API_KEY` set in Render environment variables.
+ASTRAFORGE is pre-configured for deployment on platforms like **Render**, **Railway**, or **Heroku**:
+- A `render.yaml` blueprint is included in the root directory.
+- Build command: `npm install && npm run build`
+- Start command: `npm start`
+- Ensure `GEMINI_API_KEY` is added to your environment variables in your deployment dashboard.
 
 ---
 
-## 8. AI Usage Acknowledgement & Disclaimer
+## 📚 NASA Sources & Attribution
 
-Google Gemini (`gemini-4-hydrogen`) is used strictly as a server-side educational Mission Mentor (`POST /api/mentor/explain`) to explain live simulation telemetry and verified planetary science. AI never modifies simulation calculations or fabricates NASA measurements.
+- **NASA Image and Video Library:** [images-api.nasa.gov](https://images-api.nasa.gov/)
+- **NASA Moon Exploration & Facts:** [science.nasa.gov/moon](https://science.nasa.gov/moon/)
+- **NASA Mars Exploration & Facts:** [science.nasa.gov/mars](https://science.nasa.gov/mars/)
+- **NASA Solar System Treks:** [trek.nasa.gov](https://trek.nasa.gov/)
+- **NASA Space Place:** [spaceplace.nasa.gov](https://spaceplace.nasa.gov/)
+- **NASA Media Usage Guidelines:** [nasa.gov/nasa-brand-center/images-and-media](https://www.nasa.gov/nasa-brand-center/images-and-media/)
 
-> **Disclaimer:** ASTRAFORGE is an independent educational project created for the NASA Space Apps Challenge. It is not an official NASA product and is not endorsed by NASA. NASA resources are credited to their respective sources.
+---
+
+## 🤖 AI Acknowledgement & Ethics
+
+The educational Mission Mentor utilizes Google Gemini (`@google/genai`) to provide contextual science explanations based on active simulation telemetry.
+- Simulation physics and life-support calculations are strictly deterministic and never hallucinated by AI.
+- If no Gemini API key is provided, the application automatically activates a comprehensive, deterministic rule-based mentor system ensuring full functionality offline.
+
+---
+
+## 📜 License & Disclaimer
+
+This project is open-source and created for educational purposes. 
+
+> **Disclaimer:** ASTRAFORGE is an independent educational tool. It is not an official NASA product and is not directly affiliated with or endorsed by NASA. All NASA images, videos, and scientific data are attributed to NASA according to official media usage guidelines.
